@@ -1,0 +1,6 @@
+module even_odd(
+    input [3:0] num,
+    output even
+);
+    assign even = ~num[0];
+endmodule
