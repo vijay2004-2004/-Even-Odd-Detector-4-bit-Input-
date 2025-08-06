@@ -1,0 +1,15 @@
+module tb_even_odd;
+    reg [3:0] num;
+    wire even;
+
+    even_odd uut(num, even);
+
+    initial begin
+        $dumpfile("even_odd.vcd"); $dumpvars(0, tb_even_odd);
+        num = 4'd3; #10;
+        num = 4'd4; #10;
+        num = 4'd7; #10;
+        num = 4'd8; #10;
+        $finish;
+    end
+endmodule
